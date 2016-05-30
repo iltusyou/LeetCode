@@ -1,0 +1,29 @@
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+    /*Is n in nums?*/
+    function Isinnums(n, nums) {
+            var b = false;
+            
+            for (var i = 0; i < nums.length; i++) {
+                if (n == nums[i]){
+                    b = true;
+                    break;
+                }                    
+            }
+            return b;
+        }
+
+    var nums = new Array();
+
+    for (var i = 0; i < nums1.length; i++) {
+        if (Isinnums(nums1[i], nums2) && !Isinnums(nums1[i], nums)) {
+            nums = nums.concat(nums1[i]);
+        }
+    }
+    return nums;
+        
+};
