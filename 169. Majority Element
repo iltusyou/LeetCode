@@ -1,0 +1,42 @@
+// https://leetcode.com/problems/majority-element/
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+ 
+ //數字在紀錄的索引值
+ function IsInTotal(t, ever){
+            var p= -1;
+
+            for (var i = 0; i < ever.length; i++) {
+                if (t == ever[i]) {
+                    p = i;
+                    break;
+                }
+            }
+            return p;
+        }
+ 
+var majorityElement = function(nums) {
+            var ever = new Array(); //曾經出現的數字
+            var times = new Array(); //數字出現的次數
+            for (var i = 0; i < nums.length; i++) {
+                var index = IsInTotal(nums[i], ever);
+               
+                if (index==-1) {
+                    ever = ever.concat(nums[i]);
+                    times = times.concat(1);                                        
+                    if (times[ever.length-1] > nums.length / 2) {
+                        return (ever[ever.length - 1]);
+                        
+                    }
+                }
+                else {
+                    times[index]++;
+                    if (times[index] > nums.length / 2) {
+                        return ever[index];
+                    }
+                }
+            }
+};
