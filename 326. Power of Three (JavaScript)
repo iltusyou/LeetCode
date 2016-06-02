@@ -1,0 +1,26 @@
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfThree = function(n) {
+    if(n==1)
+        return true;
+    
+    if(n<3)
+        return false;
+    
+    var result = true;        
+    while (n >1) {
+        if (n % 3 == 0){
+            n = n / 3;
+        }
+                    
+        else {
+            result = false;
+            break;
+        }
+    }
+
+    return result;
+    
+};
