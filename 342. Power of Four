@@ -1,0 +1,26 @@
+/**https://leetcode.com/problems/power-of-four/
+ * @param {number} num
+ * @return {boolean}
+ */
+var isPowerOfFour = function(num) {
+     if(num==1)
+        return true;
+    
+    if(num<4)
+        return false;
+    
+    var result = true;        
+    while (num >1) {
+        if (num % 4 == 0){
+            num = num / 4;
+        }
+                    
+        else {
+            result = false;
+            break;
+        }
+    }
+
+    return result;
+    
+};
