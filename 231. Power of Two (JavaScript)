@@ -3,20 +3,23 @@
  * @return {boolean}
  */
 var isPowerOfTwo = function(n) {
-  if(n<=0)
-    return false;
-  if(n==1)
-    return true;
+    if(n==1)
+        return true;
     
-  var result = true;        
-  while (n > 2) {
-    if (n % 2 == 0){
-        n = n / 2;
+    if(n<2)
+        return false;
+    
+    var result = true;        
+    while (n >= 2) {
+        if (n % 2 == 0){
+            n = n / 2;
+        }
+                    
+        else {
+            result = false;
+            break;
+        }
     }
-    else {
-      result = false;
-      break;
-    }
-  }
-  return result;
+
+    return result;
 };
