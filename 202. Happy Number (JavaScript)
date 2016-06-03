@@ -1,0 +1,52 @@
+/**from https://leetcode.com/problems/happy-number/
+Write an algorithm to determine if a number is "happy".
+
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.
+
+Example: 19 is a happy number
+
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+ * @param {number} n
+ * @return {boolean}
+ */
+ function isInRecord(t, record) {
+  var output=false;
+    for (var i = 0; i < record.length; i++) {
+      if (t == record[i]) {
+        output = true;
+        break;
+      }
+    }
+    return output;
+  }
+var isHappy = function(n) {
+    var result;
+    var record = new Array();
+    while(true){
+        var temp=0;
+                
+        while (n >= 10) {
+                    
+            temp += (n % 10) * (n % 10);
+            n = Math.floor(n / 10);                    
+        }
+        n = temp + (n * n);
+        
+        
+        if (n == 1) {
+            result = true;
+            break;
+        }
+        if (isInRecord(n, record)) {
+            result = false;
+            break;
+        }
+        else {
+            record=record.concat(n);
+        }
+    }
+    return result;
+};
