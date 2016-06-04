@@ -1,0 +1,59 @@
+/**https://leetcode.com/problems/n-queens-ii/
+Follow up for N-Queens problem.
+
+Now, instead outputting board configurations, return the total number of distinct solutions.
+ * @param {number} n
+ * @return {number}
+ */
+ 
+var Queens = new Array();//global variable
+   
+    var grid;//global variable
+    var count;
+
+
+    
+    var canPlaceQueen = function (x,y) {
+        //x: 第幾個皇后
+        //y: 放置的位置            
+        for (var i = 0; i < x; i++) {
+            /*判定橫、左上斜、左下斜是否已經放置皇后*/
+            if (y == Queens[i] || (x - i) == (y - Queens[i]) || (x - i) == (Queens[i] - y)) {                    
+                return false;                    
+            }
+        }            
+        return true;
+    }      
+        
+    var placeQueen = function (r) {
+        for (var i = 0; i < grid; i++) {
+            if (canPlaceQueen(r,i)) {
+                Queens[r] = i;
+                if (r == grid - 1) {                        
+                    count++;
+                    //printQueen(Queens);                        
+                }                        
+                else {
+                    placeQueen(r + 1)                       
+                }                        
+            }
+        }
+    }
+ 
+
+ 
+ 
+var totalNQueens = function(n) {
+    
+    count=0;
+    Queens.length = 0;
+    
+    grid=n;
+    Queens = Array(grid);            
+    var r = 0;            
+    placeQueen(r);
+    
+    return count;
+    
+    
+};
