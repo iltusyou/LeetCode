@@ -14,19 +14,19 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
     var printQueen = function (Queens) {
 
-    var arrTemp = new Array();
+        var arrTemp = new Array();
 
-    for (var i = 0; i < grid; i++) {
-        var strTemp = "";
-        for (var j = 0; j < grid; j++) {
-            if (j == Queens[i])
-                strTemp += "Q";
-            else
-                strTemp += ".";
+        for (var i = 0; i < grid; i++) {
+            var strTemp = "";
+            for (var j = 0; j < grid; j++) {
+                 if (j == Queens[i])
+                    strTemp += "Q";
+                else
+                    strTemp += ".";
+            }
+            arrTemp[i] = strTemp;
         }
-        arrTemp[i] = strTemp;
-    }
-    output.push(arrTemp);
+        output.push(arrTemp);
     }
     
     var canPlaceQueen = function (x,y) {
