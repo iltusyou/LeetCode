@@ -1,0 +1,15 @@
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(numbers, target) {
+    for(var i = 0;i<numbers.length-1;i++){
+        for(var j=i+1;j<numbers.length;j++){
+            if(numbers[j]==target-numbers[i]){
+                var result=[i+1, j+1];
+                return result;
+            }
+        }
+    }
+};
