@@ -21,11 +21,12 @@ class Solution:
             k-=1
             i+=1
 
+        sortedNums = sorted(sortedNums)       
         print(sortedNums, k, i)
 
         k = k%2
-        if k==1:
-            sortedNums[i] = sortedNums[i] * -1
+        if k==1:            
+            sortedNums[0] = sortedNums[0] * -1
 
  
         result = sum(sortedNums)

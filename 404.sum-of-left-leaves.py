@@ -29,8 +29,7 @@ class Solution:
 
             if node.left is not None and node.left.left is None and node.left.right is None:                
                 sum = sum + node.left.val
-            
-            
+                        
             dfs(node.left)
             dfs(node.right)
             

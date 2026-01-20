@@ -2,9 +2,7 @@ from typing import List
 
 
 class Solution:
-    def findContentChildren(self, g: List[int], s: List[int]) -> int:
-        res = 0
-
+    def findContentChildren(self, g: List[int], s: List[int]) -> int:        
         sortedG = sorted(g)
         sortedS = sorted(s)
 
@@ -14,14 +12,12 @@ class Solution:
         while sIndex > -1 and gIndex >-1:         
             canSatisfy = sortedS[sIndex] >= sortedG[gIndex]
 
-            if canSatisfy:
-                res += 1
+            if canSatisfy:    
                 sIndex -= 1
 
             gIndex -= 1
-    
-        print(gIndex, sIndex)
-        return len(s) - sIndex -1
+            
+        return len(s) - sIndex - 1
     
 # g = [1,2,3], s = [1,1]
 

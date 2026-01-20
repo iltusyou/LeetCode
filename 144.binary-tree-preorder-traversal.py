@@ -21,8 +21,7 @@ class Solution:
         if root is None:
             return []
         
-        res = [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
-        print(root.val, res)        
+        res = [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)        
         return res
     
 

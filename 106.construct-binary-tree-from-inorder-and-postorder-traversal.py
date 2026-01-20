@@ -51,7 +51,7 @@ class Solution:
         leftPostorder = postorder[0:leftLength]
         rightPostorder = postorder[leftLength: len(postorder)-1]
 
-        print(inorder, postorder, leftInorder, rightInorder, leftPostorder, rightPostorder)
+        # print(inorder, postorder, leftInorder, rightInorder, leftPostorder, rightPostorder)
 
         root.left = self.buildTree(leftInorder, leftPostorder)
         root.right = self.buildTree(rightInorder, rightPostorder)

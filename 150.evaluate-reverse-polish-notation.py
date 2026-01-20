@@ -10,12 +10,9 @@ from typing import List
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
-        stacks = []
-        res = 0
+        stacks = []       
 
         for c in tokens:
-            print(c)
-
             if c == "+":
                 tmp = stacks[-1] + stacks[-2]
                 stacks = stacks[:-2]
@@ -39,11 +36,7 @@ class Solution:
             else:
                 stacks.append(int(c))
 
-            print(stacks)
-
-
-
-        return 
+        return stacks[-1]
         
 # @lc code=end
 
@@ -51,7 +44,5 @@ tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
 sol = Solution()
 ans = sol.evalRPN(tokens)
 print(ans)
-
-print(6//-132)
 
 

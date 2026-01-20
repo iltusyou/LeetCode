@@ -19,9 +19,7 @@ from utils import TreeNode, arrayToTree, treeToArray
 
 
 class Solution:
-    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        print(root)
-
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:      
         if root is None:
             return None
 
@@ -34,7 +32,7 @@ class Solution:
         if root.val < val:
             return self.searchBST(root.right, val)
 
-        return
+       
 # @lc code=end
 
 root = [4,2,7,1,3]

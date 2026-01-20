@@ -12,9 +12,7 @@ class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         res = []
 
-        def backtracking(k, n, i, path):   
-            # print(i, path)
-
+        def backtracking(k, n, i, path):               
             if len(path) == k and sum(path) == n:
                 res.append(path.copy())
                 return

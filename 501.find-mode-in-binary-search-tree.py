@@ -18,7 +18,6 @@ from utils import TreeNode, arrayToTree
 
 class Solution:
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
-
         def traversal(node):
             if node is None:
                 return []
@@ -30,8 +29,6 @@ class Solution:
         count = 0
         maxCount = 0
         res = []
-
-        print(arr)
 
         for i in range(len(arr)):
             if arr[i] != curVal:
@@ -45,8 +42,6 @@ class Solution:
 
             elif count == maxCount:
                 res.append(arr[i])
-
-            print(arr[i], res, count)
 
         return res
 # @lc code=end

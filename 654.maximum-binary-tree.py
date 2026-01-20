@@ -27,8 +27,6 @@ class Solution:
         leftNums = nums[0:idx]
         rightNums = nums[idx+1: len(nums)]
 
-        print(leftNums, rightNums)
-
         root = TreeNode(maxVal)
         root.left = self.constructMaximumBinaryTree(leftNums)
         root.right = self.constructMaximumBinaryTree(rightNums)

@@ -19,15 +19,11 @@ class Solution:
         for i in range(0, n):
             curr_sum += gas[i] - cost[i]
             total_sum += gas[i] - cost[i]
-
-            print(f"i={i} currsum={curr_sum} totalsum={total_sum}")
-
+        
             if curr_sum < 0:
                 curr_sum = 0
                 start = i+1
-
         
-
         if total_sum < 0:
             return -1
         

@@ -14,9 +14,8 @@ class Solution:
             for j in range(1, t):
                 minSteps[i+j] = min(minSteps[i+j], minSteps[i] + 1) 
                 
-            print(f"i={i}", minSteps)
-            
-                
+
+                            
         return minSteps[-1]
     
 

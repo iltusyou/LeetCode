@@ -15,8 +15,6 @@ class Solution:
         for n in nums:
             numsMap[n] = numsMap.get(n, 0) + 1
 
-        
-
         indexMap = {}
         for key, value in numsMap.items():
             arr = indexMap.get(value, [])
@@ -26,20 +24,9 @@ class Solution:
         res = []
 
         for key, value in  sorted(indexMap.items(), reverse = True):
-            print(key, value)
-
-            res.extend(value)
-            print(res)
+            res.extend(value)            
             if len(res) >= k:
                 break
-
-        
- 
-
-            
-
-
-        
 
         return res
         

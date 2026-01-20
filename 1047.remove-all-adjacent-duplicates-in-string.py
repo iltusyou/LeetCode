@@ -18,10 +18,10 @@ class Solution:
 
             else:
                 stacks.append(c)
-        print(stacks)
+        
         res = "".join(stacks)
-
         return res
+    
 # @lc code=end
 
 s = "abbaca"

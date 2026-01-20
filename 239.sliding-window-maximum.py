@@ -36,14 +36,9 @@ class Solution:
 
             que = self.keepMax(que, nums[i])
             res.append(que[0])
-
-            
-            print(que, res)
-
-        print(que)
-            
+                        
+        return res
     
-        return
 # @lc code=end
 
 

@@ -18,10 +18,8 @@ class Solution:
 
         for v in intervals:
             if v[0] >= right:
-                print(v, right)
                 right = v[1]
                 count += 1
-
 
         res = n - count
 

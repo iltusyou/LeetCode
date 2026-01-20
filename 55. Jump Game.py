@@ -3,14 +3,17 @@ from typing import List
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:        
-        maxReach = nums[0]
-        for i in range(1, len(nums)):            
-            if i <= maxReach:
-                j = i + nums[i]                
-                if j > maxReach:
-                    maxReach = j            
+        if len(nums) == 0: return 0
 
-        return True if maxReach >= len(nums) -1 else False
+        cover = 0
+        for i in range(0, len(nums)):            
+            if i <= cover:
+                cover = max(cover, i+nums[i])
+                
+            if cover >= len(nums) -1:
+                return True
+
+        return  False
 
 
 # nums = [2,3,1,1,4] 

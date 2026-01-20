@@ -25,16 +25,11 @@ class Solution:
             return None
         
         if root1 is None and root2 is not None:
-            # root2.left = self.mergeTrees(None, root2.left)
-            # root2.right = self.mergeTrees(None, root2.right)
             return root2
         
         if root2 is None and root1 is not None:
-            # root1.left = self.mergeTrees(root1.left, None)
-            # root1.right = self.mergeTrees(root1.right, None)
             return root1
         
-
         root1.val += root2.val        
         root1.left = self.mergeTrees(root1.left, root2.left)
         root1.right = self.mergeTrees(root1.right, root2.right)

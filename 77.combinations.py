@@ -12,8 +12,7 @@ class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
         res = []
 
-        def backtracking(i, arr):
-            print(arr)
+        def backtracking(i, arr):           
             if len(arr) == k:
                 nonlocal res
                 res.append(arr)                
@@ -28,7 +27,7 @@ class Solution:
         return res
 # @lc code=end
 
-n = 10
+n = 4
 k = 2
 
 sol = Solution()

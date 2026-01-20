@@ -22,9 +22,7 @@ class Solution:
                 return 0
             
             leftHeight = dfs(node.left)
-            rightHeight = dfs(node.right)
-
-            print(node.val, leftHeight, rightHeight)
+            rightHeight = dfs(node.right)           
 
             if leftHeight is False or rightHeight is False:
                 return False
@@ -32,8 +30,7 @@ class Solution:
             if abs(leftHeight - rightHeight) > 1:
                 return False
 
-            height = max(leftHeight,rightHeight) + 1 
-            
+            height = max(leftHeight,rightHeight) + 1             
             return height
         
         res = dfs(root) is not False

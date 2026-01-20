@@ -11,7 +11,7 @@ from typing import List
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
         points.sort(key=lambda x: (x[0]))
-        print(points)    
+        # print(points)    
 
         count = 0
         minRight = -float('inf')
@@ -24,7 +24,7 @@ class Solution:
             else:
                 minRight = min(minRight, p[1])
 
-            print(p, minRight, count)
+     
 
         # count = 0
         # inter = [float('inf'), -float('inf')]

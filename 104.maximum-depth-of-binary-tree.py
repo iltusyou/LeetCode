@@ -17,7 +17,6 @@ from utils import TreeNode, arrayToTree
 
 class Solution:    
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-
         def dfs(node):
             if not node:
                 return 0
