@@ -16,9 +16,7 @@ class Solution:
 
         for n in nums2:            
             while len(stack)> 0 and stack[-1] < n:                    
-                    hash[stack.pop()] = n
-                
-                                    
+                    hash[stack.pop()] = n                                                    
             stack.append(n)            
 
 
