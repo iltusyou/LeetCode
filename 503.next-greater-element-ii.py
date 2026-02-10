@@ -9,8 +9,7 @@ from typing import List
 
 
 class Solution:
-    def nextGreaterElements(self, nums: List[int]) -> List[int]:
-        
+    def nextGreaterElements(self, nums: List[int]) -> List[int]:        
         resLen = len(nums)
 
         nums = nums + nums[0:-1]   
