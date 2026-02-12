@@ -15,14 +15,8 @@ class Solution:
         for i in range(l):
             j = i + nums[i]
 
-            if j >= l:
-                j = j % l
-
-            elif j < 0:
-                j = j % l
-
-
-
+            if j >= l or j < 0:
+                j = j % l            
 
             res[i] = nums[j]
             
