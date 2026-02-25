@@ -37,9 +37,7 @@ class Solution:
 
         
         res = [0]
-        d={
-            0:1
-        }
+        d={0:1}
         dfs(root, 0, d, res)
         return res[0]
 

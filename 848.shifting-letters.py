@@ -24,7 +24,7 @@ class Solution:
             c = self.shift(s[i], count)
             res.append(c)
             
-        res =  ('').join(res[::-1])
+        res = ('').join(res[::-1])
         return res
         
 # @lc code=end

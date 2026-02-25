@@ -19,13 +19,15 @@ class Solution:
             prefix_sum += nums[i]
             d[i+1] = prefix_sum
 
-
         res = float('inf')
         for i in range(l, r+1):
             for j in range(i, nums_len+1):
                 sub_sum = d[j] - d[j-i]
                 if sub_sum > 0 and sub_sum < res:
                     res = sub_sum                                
+
+        if res == float('inf'):
+            res = -1
         return res
         
 # @lc code=end
