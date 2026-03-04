@@ -22,15 +22,9 @@ class Solution:
                 else:
                     que.appendleft(c)
 
-            print(que, backward)
-
-        
         if not backward:
             que = reversed(que)
-        
-
-
-        
+                
         return ''.join(que)
         
 # @lc code=end

@@ -18,7 +18,6 @@ class RecentCounter:
         while self.que[0] < t - 3000:
             self.que.popleft()
 
-
         return len(self.que)
 
        

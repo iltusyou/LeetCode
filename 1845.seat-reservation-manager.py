@@ -14,13 +14,12 @@ class SeatManager:
         h = [ i+1 for i in range(n)]    
         self.h = h            
 
-    def reserve(self) -> int:
-        
+    def reserve(self) -> int:        
         return heapq.heappop(self.h)
 
     def unreserve(self, seatNumber: int) -> None:
         heapq.heappush(self.h, seatNumber)      
-        print(self.h)
+
        
 
 
