@@ -33,7 +33,6 @@ class Solution:
         for i in range(1, c+1):
             h = []            
             dfs(i, h)
-            print(h)
             if len(h) > 1:
                 heapq.heapify(h)
                 for x in h:

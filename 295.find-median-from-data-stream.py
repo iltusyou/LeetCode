@@ -47,7 +47,3 @@ for op, num in zip(inputs1, inputs2):
         param_2 = obj.findMedian()
         print(param_2)
         continue
-
-
-a = heapq.heappushpop([], 1)
-print(a)
