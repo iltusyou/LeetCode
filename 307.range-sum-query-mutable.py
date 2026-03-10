@@ -17,6 +17,14 @@ class NumArray:
         self.tree = [0] * (n+1)
 
     def update(self, index: int, val: int) -> None:        
+        delta = val - self.nums[index]
+        self.nums[index] = val
+
+        i = index + 1
+        while i < len(self.tree):
+            self.tree[i] += delta
+            
+
         return
 
     def sumRange(self, left: int, right: int) -> int:

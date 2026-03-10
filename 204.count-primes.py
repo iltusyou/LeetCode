@@ -7,22 +7,16 @@
 # @lc code=start
 class Solution:
     def countPrimes(self, n: int) -> int:
-
-
         is_prime = [False] * 2 + [True] * (n-2)
         primes = []
 
         for i in range(2, n):
             if is_prime[i]:
                 primes.append(i)
-                for j in range(i*i, n, i):
-                    print('j', j)
-                    is_prime[j] = False
-
-            print(is_prime, primes)
-
+                for j in range(i*i, n, i):                    
+                    is_prime[j] = False            
         
-        return 
+        return len(primes)
         
 # @lc code=end
 

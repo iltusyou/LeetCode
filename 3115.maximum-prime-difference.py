@@ -13,7 +13,7 @@ def is_prime(n: int) -> bool:
         if n % i == 0:
             return False
         
-    return n != 1
+    return n >= 2
    
 class Solution:                       
     def maximumPrimeDifference(self, nums: List[int]) -> int:

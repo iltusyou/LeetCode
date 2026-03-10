@@ -33,24 +33,13 @@ class UnionFind:
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         uf = UnionFind(len(edges)+1)
-
-        ans = []
-        for i, (x, y) in enumerate(edges):
-            # 在同一個地方 -> 行程環
+        
+        for _, (x, y) in enumerate(edges):
+            # 在同一個地方 -> 形成環
             if uf.is_same(x, y):
                 return [x, y]
                         
-            uf.merge(y, x)
-            
-
-                
-
-
-                
-           
-                
-
-        return ans
+            uf.merge(y, x)            
 
 
         
