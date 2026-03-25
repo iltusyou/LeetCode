@@ -23,7 +23,6 @@ class Solution:
             if n > end:                
                 ans += 1
                 end = n + w
-                print(n, end)
         
         return ans   
 # @lc code=end

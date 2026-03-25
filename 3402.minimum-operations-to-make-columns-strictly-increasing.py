@@ -20,12 +20,9 @@ class Solution:
                 if grid[i][j] > grid[i-1][j]:
                     continue
 
-                cur = grid[i-1][j] + 1
-                                
+                cur = grid[i-1][j] + 1                                
                 ans += cur - grid[i][j]
                 grid[i][j] = cur
-
-        print(grid)
       
         return ans                
         

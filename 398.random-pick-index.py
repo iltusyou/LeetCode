@@ -21,7 +21,11 @@ class Solution:
 
     def pick(self, target: int) -> int:
         arr = self.dic[target]
-        random_index = random.randint(0, len(arr)-1)
+        n = len(arr)
+        if n == 1:
+            return arr[0]
+
+        random_index = random.randint(0, n-1)
 
         return arr[random_index]
 

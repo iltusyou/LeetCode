@@ -15,17 +15,14 @@ class Solution:
         arr = [(val, key) for key, val in dic.items()]
         cnt = len(arr)
 
-        if cnt == k:
+        if cnt <= k:
             return 0                
 
         arr.sort()  
-        ans = sum(x for x,_ in arr[:cnt - k] )
-   
-       
-
-        print(dic, arr)
+        ans = sum(x for x, _ in arr[:cnt - k] )                  
 
         return ans
+    
 # @lc code=end
 
 s = "abc"

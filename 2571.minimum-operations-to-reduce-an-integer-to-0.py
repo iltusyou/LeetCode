@@ -11,11 +11,9 @@ class Solution:
 
         cnt0 = b.count('0')
         cnt1 = len(b) - cnt0
+        ans = min(cnt0 + 2, cnt1)
 
-
-        print(b, cnt0, cnt1)
-
-        return
+        return ans
 # @lc code=end
 
 n = 39

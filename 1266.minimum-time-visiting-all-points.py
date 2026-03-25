@@ -18,13 +18,9 @@ class Solution:
 
             dx = abs(x2 - x1)
             dy = abs(y2 - y1) 
-            z = min(dx, dy) #走斜的
+            z = min(dx, dy) #走斜的            
 
-            cur = dx + dy - z            
-
-            print(dx, dy, z, cur)
-
-            ans += abs(cur)
+            ans += dx + dy - z            
             
         return ans
     

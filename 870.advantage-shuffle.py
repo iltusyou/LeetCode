@@ -38,7 +38,6 @@ class Solution:
         for x, i in zip(rest, rest_idx):
             ans[i] = x
 
-
         return ans
         
 # @lc code=end
