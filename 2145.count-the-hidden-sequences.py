@@ -11,19 +11,15 @@ from typing import List
 class Solution:
     def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:
         if len(differences) == 1:
-            ans = max(upper - lower - abs(differences[0]) + 1, 0) 
-            
+            ans = max(upper - lower - abs(differences[0]) + 1, 0)             
             return ans
-
         
-
         s = [0]
         for d in differences:
             s.append(s[-1]+d)
                     
         max_val = max(s)
         min_val = min(s)
-
 
         print(max_val, min_val)
 
