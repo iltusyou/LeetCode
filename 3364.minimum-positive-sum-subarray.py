@@ -11,13 +11,10 @@ from typing import List
 class Solution:
     def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:
         nums_len = len(nums)
-        d = [0] * (nums_len+1)
+        d = [0]
 
-        prefix_sum = 0
-
-        for i in range(nums_len):
-            prefix_sum += nums[i]
-            d[i+1] = prefix_sum
+        for i in range(nums_len):            
+            d.append(d[-1] + nums[i])
 
         res = float('inf')
         for i in range(l, r+1):
